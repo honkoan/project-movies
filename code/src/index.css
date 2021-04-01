@@ -13,7 +13,7 @@ code {
     monospace;
 }
 
-.main-container {
+.movie-card-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -26,7 +26,6 @@ code {
 .poster-image {
   width: 100%;
 }
-
 
 .movie-details {
   display: flex;
