@@ -61,7 +61,6 @@ code {
 .movie-card {
   width: 50%;
 }
-
 }
 
 @media (min-width: 1200px) {
@@ -69,5 +68,4 @@ code {
  .movie-card {
   width: 25%;
 }
-
 }

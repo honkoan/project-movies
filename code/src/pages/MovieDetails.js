@@ -40,7 +40,7 @@ export const MovieDetails = () => {
             <div className="movie-info">
               <h1 className="movie-details-title">
                 {movieDetails.title}
-                <span className="rating">{movieDetails.vote_average}/10 </span>
+                <span className="rating">{movieDetails.vote_average} /10 </span>
               </h1>
               <p className="overview">{movieDetails.overview}</p>
             </div>
@@ -49,4 +49,4 @@ export const MovieDetails = () => {
       </div>
     </>
   );
-};
+}
