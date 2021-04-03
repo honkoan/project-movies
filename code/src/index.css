@@ -19,7 +19,7 @@ code {
 }
 
 .movie-card {
-  width: 25%;
+  width: 100%;
   position: relative;
 }
 
@@ -43,15 +43,31 @@ code {
   opacity: 1;
 }
 
-h1 {
+.main-title {
   color: white;
   padding-left: 8%;
   font-size: 2.5vw;
 }
 
-p {
+.released-info {
   color: white;
   margin-top: 0;
   padding: 0 0 5% 8%;
   font-size: 2vw;
+}
+
+@media (min-width: 767px) {
+
+.movie-card {
+  width: 50%;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+ .movie-card {
+  width: 25%;
+}
+
 }

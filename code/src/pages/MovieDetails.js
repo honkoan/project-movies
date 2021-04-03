@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-import './moviedetails.css'
+import "./moviedetails.css";
 
 export const MovieDetails = () => {
-  const { movie_id } = useParams()
-  const [movieDetails, setMovieDetails] = useState({})
+  const { movie_id } = useParams();
+  const [movieDetails, setMovieDetails] = useState({});
 
   useEffect(() => {
     fetch(
@@ -13,15 +13,12 @@ export const MovieDetails = () => {
     )
       .then((response) => response.json())
       .then((json) => setMovieDetails(json))
-      .catch((err) => console.error(err))
-  }, [movie_id])
+      .catch((err) => console.error(err));
+  }, [movie_id]);
 
   return (
     <>
       <div className="main-wrapper">
-        <Link to="/" className="button-back">
-          <p>Movies</p>
-        </Link>
         <div
           className="the-background"
           style={{
@@ -29,6 +26,11 @@ export const MovieDetails = () => {
           }}
           alt={movieDetails.title}
         >
+          <a href="/" className="button-back">
+            <span className="arrow-box">&#x2B05; </span>
+            <span className="back-link-text"> Movies</span>
+          </a>
+
           <div className="information">
             <img
               className="info-image"
@@ -38,7 +40,7 @@ export const MovieDetails = () => {
             <div className="movie-info">
               <h1 className="movie-details-title">
                 {movieDetails.title}
-                <span className="rating">{movieDetails.vote_average} /10 </span>
+                <span className="rating">{movieDetails.vote_average}/10 </span>
               </h1>
               <p className="overview">{movieDetails.overview}</p>
             </div>
@@ -46,5 +48,5 @@ export const MovieDetails = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
