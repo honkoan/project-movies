@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const MovieCard = ({ title, release_date, poster_path, id }) => {
   return (
@@ -11,10 +11,10 @@ export const MovieCard = ({ title, release_date, poster_path, id }) => {
           alt={title}
         />
         <div className="movie-details">
-          <h1 className="main-title">{title}</h1>
-          <p className="released-info">Released {release_date}</p>
+          <h1>{title}</h1>
+          <p>Released {release_date}</p>
         </div>
       </Link>
     </>
-  );
-};
+  )
+}

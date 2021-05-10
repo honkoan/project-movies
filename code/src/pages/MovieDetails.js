@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-import "./moviedetails.css";
+import './moviedetails.css'
 
 export const MovieDetails = () => {
-  const { movie_id } = useParams();
-  const [movieDetails, setMovieDetails] = useState({});
+  const { movie_id } = useParams()
+  const [movieDetails, setMovieDetails] = useState({})
 
   useEffect(() => {
     fetch(
@@ -13,8 +13,7 @@ export const MovieDetails = () => {
     )
       .then((response) => response.json())
       .then((json) => setMovieDetails(json))
-      .catch((err) => console.error(err));
-  }, [movie_id]);
+  }, [movie_id])
 
   return (
     <>
@@ -26,10 +25,10 @@ export const MovieDetails = () => {
           }}
           alt={movieDetails.title}
         >
-          <a href="/" className="button-back">
+          <Link to="/" className="button-back">
             <span className="arrow-box">&#x2B05; </span>
             <span className="back-link-text"> Movies</span>
-          </a>
+          </Link>
 
           <div className="information">
             <img
@@ -48,5 +47,5 @@ export const MovieDetails = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
